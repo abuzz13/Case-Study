@@ -3,7 +3,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # Load and preprocess data
-data = pd.read_csv('/Users/amandabusswitz/PycharmProjects/RevSpring/Case_Study_Data.csv')
+data = pd.read_csv('FilePath.csv')
 data['EVENT_DATETIME'] = pd.to_datetime(data['EVENT_DATETIME'], errors='coerce')
 data = data.dropna(subset=['EVENT_DATETIME']).sort_values(by=['FORM_NAME', 'SESSION_ID', 'EVENT_DATETIME']).reset_index(drop=True)
 
